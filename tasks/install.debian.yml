@@ -107,7 +107,7 @@
 - name: Install PIP
   apt:
     pkg:
-      - "{{ 'python3-dev' if ('python3-pip' == python_pip_package) else 'python-dev' }}"  # different python-dev for python3
+      - "{{ 'python3-dev' if ('python3-pip' == mongodb_pip_package_name) else 'python-dev' }}"  # different python-dev for python3
       - "{{ mongodb_pip_package_name }}"
   when: mongodb_pymongo_from_pip | bool
 
